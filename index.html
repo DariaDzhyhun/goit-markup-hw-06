@@ -317,14 +317,33 @@
                                 </svg> </a></li>
                     </ul>
                 </div>
+                <form class="footer-form-container">
+                    <p class="title-form-footer">Підпишіться на розсилку</p>
+                    <div class="input-footer"><label>
+                            <input type="email" name="email" placeholder="E-mail" class="footer-form">
+                        </label>
+                        <button type="submit" class="footer-button">Підписатися <svg width="24" height="24"
+                                class="icon-form-footer">
+                                <use href="./images/icons.svg#icon-icon-send"></use>
+                            </svg></button>
+                    </div>
+                </form>
             </div>
         </div>
     </footer>
     <div data-modal class="backdrop is-hidden">
         <div class="modal">
-            <button data-modal-close class="modal-button"> <svg class="icon-close-button" width="11" height="11" >
-                    <use href="./images/icons.svg#icon-close-black" ></use>
+            <button data-modal-close class="modal-button"> <svg class="icon-close-button" width="11" height="11">
+                    <use href="./images/icons.svg#icon-close-black"></use>
                 </svg></button>
+            <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+            <div>
+            <label>Ім'я
+            <input type="text" name="name"></label>
+            <svg width="12" height="12">
+                <use href="./images/icons.svg#icon-phone-black"></use>
+            </svg>
+            
         </div>
     </div>
     <script src="./modal.js"></script>
