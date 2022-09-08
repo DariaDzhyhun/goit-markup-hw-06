@@ -537,6 +537,7 @@ margin-bottom: 9px;
 .footer-form{
     width: 358px;
     height: 50px;
+    padding: 15px 16px;
 
     font-size: 16px;
     line-height: 1.25;
@@ -552,6 +553,7 @@ margin-bottom: 9px;
     align-items: center;
     text-align: center;
     justify-content: space-between;
+    cursor: pointer;
    
     padding: 10px 28px ;
     width: 200px;
@@ -781,12 +783,12 @@ margin-bottom: 9px;
 }
 .input-modal-form{
     display: block;
+    width: 100%;
     resize: none;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    width: 448px;
     height: 40px;
-    padding-left: 42px;
+    padding: 12px 42px;
     fill: currentColor;
 
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -801,6 +803,7 @@ margin-bottom: 9px;
   }
 
 .comment{
+    margin-top: 4px;
     padding-left: 16px;
     resize: none;
     width: 448px;
@@ -850,8 +853,11 @@ margin-bottom: 9px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
-   color: var(--accent-color); 
+    color: var(--accent-color); 
   
+}
+.modal-link:hover{
+    text-decoration: none;
 }
 .icon-form{
     position: absolute;
@@ -880,7 +886,15 @@ margin-bottom: 9px;
     background-origin: border-box;
     border-color: var(--accent-color);
 }
+ .checkbox-item:focus+.checkbox-icon {
+    border-color: var(--accent-color);
+ }
 .position{
     position: relative;
 }
-     
+.label{
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    margin-bottom: 4px;
+}
