@@ -720,14 +720,15 @@ margin-bottom: 9px;
 }
 .modal{
     position: absolute;
-    
+    display: flex;
+    flex-direction: column;
+   
     top: 50%;
     left: 50%;
     padding: 40px;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    /* padding-left: 40px;
-    padding-right: 40px; */
+    
 
     min-width: 528px;
     min-height: 581px;
@@ -775,7 +776,8 @@ margin-bottom: 9px;
     line-height: 1.66;
     letter-spacing: 0.01em;
     color: var(--primary-text-color);
-
+    
+    transform: color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .input-modal-form{
     display: block;
@@ -786,21 +788,27 @@ margin-bottom: 9px;
     height: 40px;
     padding-left: 42px;
     fill: currentColor;
+
+    transform: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.comment{
-    padding-left: 16px;
-}
-.input-modal:focus{
+.input-modal-form:hover, .input-modal-form:focus{
     border: 1px solid var(--accent-color);
-    fill: var(--accent-color);
-    color: var(--accent-color);
+    outline: none;
 }
+.input-modal:hover, .input-modal:focus-within{
+   
+   fill: var(--accent-color);
+  }
 
 .comment{
+    padding-left: 16px;
     resize: none;
     width: 448px;
     height: 120px;
     color: rgba(117, 117, 117, 0.5);
+}
+.fornm-comment{
+    margin-bottom: 20px;
 }
 .send-button{
     width: 200px;
@@ -824,16 +832,25 @@ margin-bottom: 9px;
     background: #188CE8;
 }
 .title-checkbox{
+    display: block;
     font-size: 14px;
     line-height: 1.71;    
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
+    margin-bottom: 30px;
+}
+.checkbox{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .modal-link{
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 0.03em;
    color: var(--accent-color); 
+  
 }
 .icon-form{
     position: absolute;
@@ -844,9 +861,20 @@ margin-bottom: 9px;
     height: 18px;
     
 }
-/* .position:focus-within > .icon-form{
-    fill: var(--accent-color);
-} */
+.checkbox-icon{
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 14px;
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--black-color);
+    border-radius: 2px;
+}
+.checkbox-item:checked + .checkbox-icon{
+    background-color: var(--accent-color);
+}
 .position{
     position: relative;
 }
+     
